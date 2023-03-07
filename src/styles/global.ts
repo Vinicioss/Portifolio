@@ -8,27 +8,35 @@ export default createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 
-    ::-webkit-scroolbar {
-      wisth: 8px
-      height: 5px
-    }
-    ::-webkit-scrollbar-thumb {
-      background: ${({ theme }) => theme.colors.primary};
-      border-radius: 10px;
-    }
-    ::-webkit-scrollbar-track{
-      background: ${({ theme }) => lighten(0.4, theme.colors.primary)};
-    }
+    ::-webkit-scrollbar {
+      width: .6rem;
+      border-radius: .5rem;
+      background-color: ${({ theme }) => theme.colors.backgroundLight};
+  }
+  ::-webkit-scrollbar-thumb {
+      width: .6rem;
+      border-radius: .5rem;
+      background-color: ${({ theme }) => theme.colors.secondary};
+  }
+  ::-webkit-scrollbar-thumb:hover {
+      width: .6rem;
+      border-radius: .5rem;
+      background-color: ${({ theme }) => theme.colors.primary};
+  }
+
+    scrollbar-color: ${({ theme }) => theme.colors.secondary} ${({ theme }) => theme.colors.backgroundLight} !important;
+    scrollbar-width: thin !important;
   }
 
   body {
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.text};
-    font: 400 16px Inter, sans-serif;
+    font: 400 1rem Inter, sans-serif;
   }
   body {
     background: ${props => props.theme.colors.background};
     font: 400 1rem 'Montserrat', sans-serif;
+    min-height: 100vh;
   }
   img {
     width: 100%;

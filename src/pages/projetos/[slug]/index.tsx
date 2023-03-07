@@ -24,7 +24,7 @@ interface ProjetoProps {
 export default function Projeto({ projeto }: ProjetoProps) {
 
     const router = useRouter();
-    
+    console.log(projeto);
     if(router.isFallback) {
         return <LoadingScreen/>
     }
@@ -52,13 +52,13 @@ export default function Projeto({ projeto }: ProjetoProps) {
             type={projeto.type}
             imgUrl={projeto.thumbnail}
           />
-
+          
             <main>
                 <p>
                     {projeto.description}
                 </p>
                 <button type='button'>
-                    <a href='#'>Ver projeto online</a>
+                    <a href={projeto.link}>Ver projeto online</a>
                 </button>
             </main>
         </ProjetoContainer>

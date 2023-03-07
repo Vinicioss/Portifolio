@@ -10,13 +10,13 @@ export const Container = styled.div`
 
     h1 {
         color: ${({ theme }) => theme.colors.primary};
-        font-size: 4.5rem;
+        font-size: 4rem;
     }
 
     h2 {
         color: ${({ theme }) => theme.colors.secondary};
         font-weight: 300;
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
     @media (max-width: 1000px) {
