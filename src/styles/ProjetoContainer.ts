@@ -15,6 +15,8 @@ export const ProjetoContainer = styled.div`
         padding: 0 5rem;
 
         p {
+            display: flex;
+            white-space: pre-wrap;
             color: ${({theme}) => theme.colors.textLight};
             font-size: 1.5rem;
             font-weight: 300;
