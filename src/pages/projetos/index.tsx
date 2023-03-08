@@ -5,6 +5,7 @@ import { getPrismicClient } from "../../Services/prismic";
 import { ProjetosContainer } from "../../styles/ProjetoStyles";
 import Prismic from '@prismicio/client';
 import Head from "next/head";
+import 'remixicon/fonts/remixicon.css';
 
 interface IProjeto {
     slug: string,

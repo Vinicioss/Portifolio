@@ -3,7 +3,7 @@ const theme = {
   
   colors: {
     background: '#E1E5F2',
-    backgroundLight: '#FFFFFF',
+    backgroundLight: '#BFDBF7',
     primary: '#033B4F',
     secondary: '#1F7A8C',
     gradient: 'linear-gradient(225deg, #C6CDE7 0%, #BFDBF7 100%);',
@@ -14,7 +14,7 @@ const theme = {
     inputBackground: '#BFDBF7',
     error: '#d45d5d',
     animGradient1: '#d45d5d', 
-    animGradient2: '#1F7A8C',
+    animGradient2: '#4e00c2',
     animGradient3: '#4e00c2'
   }
 };

@@ -82,7 +82,6 @@ export const TextContainer = styled.section`
     }
     
     .wrapper {
-        /*This part is important for centering*/
         display: grid;
         place-items: center;
     }
@@ -122,12 +121,6 @@ export const InfosContainer = styled.section`
 
 export const CodeItem = styled.pre`
 
-@property --rotate {
-        syntax: "<angle>";
-        initial-value: 132deg;
-        inherits: false;
-    }
-
 --card-width: 24rem;
 --card-height: 10rem;
     
@@ -137,13 +130,7 @@ export const CodeItem = styled.pre`
     height: var(--card-height);
     position: relative;
     border-radius: 8px;
-    padding: .1rem;
-    background-image: linear-gradient(var(--rotate), ${({ theme }) => theme.colors.animGradient1},
-     ${({ theme }) => theme.colors.animGradient2} 43%,
-      ${({ theme }) => theme.colors.animGradient3});
-    top: -1%;
-    left: -2%;
-    animation: spin 2.5s ease-in-out infinite;
+
 
     .card {
         background: ${({ theme }) => theme.colors.gradient};
@@ -191,39 +178,5 @@ export const CodeItem = styled.pre`
     &:last-child {
         align-self: flex-end;
     }
-
-
-
-    &::after {
-        position: absolute;
-        content: "";
-        top: 0;
-        left: calc(var(--card-height)/-6);
-        right: 0;
-        z-index: -1;
-        height: 105%;
-        width: 115%;
-        margin: 0 auto;
-        transform: scale(0.8);
-        filter: blur(calc(var(--card-height) / 5));
-        background-image: linear-gradient(
-            var(--rotate)
-            , ${({ theme }) => theme.colors.animGradient1},
-            ${({ theme }) => theme.colors.animGradient2} 43%,
-            ${({ theme }) => theme.colors.animGradient3});
-            opacity: 1;
-        transition: opacity .5s;
-        animation: spin 2.5s linear infinite;
-    }
-
-    @keyframes spin {
-        0% {
-            --rotate: 0deg;
-        }
-        100% {
-            --rotate: 360deg;
-        }
-    }
-
 
 `;

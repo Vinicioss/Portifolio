@@ -11,7 +11,7 @@ interface ProjetoItemProps {
 
 export function ProjetoItem({ title, type, imgUrl, slug }: ProjetoItemProps) {
   return (
-    <Container imgUrl={imgUrl} data-aos="zoom-in">
+    <Container imgUrl={imgUrl}>
       <Link href={`/projetos/${slug}`}>
         <a>
           <div className='overlay'/>

@@ -26,10 +26,10 @@ export const Container = styled.header`
         right: 1.5rem;
     }
     .change-theme {
+        all: unset;
         font-size: 1.25rem;
         color: ${({ theme }) => theme.colors.primary};
         cursor: pointer;
-        appearance: none;
     }
 `;
 

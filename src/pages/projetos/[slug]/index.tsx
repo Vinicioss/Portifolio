@@ -7,6 +7,7 @@ import Prismic from '@prismicio/client';
 import { useRouter } from 'next/router'
 import LoadingScreen from '../../../components/LoadingScreen'
 import Head from 'next/head'
+import 'remixicon/fonts/remixicon.css';
 
 interface IProjeto {
     slug: string,
