@@ -17,7 +17,6 @@ export const Container = styled.div<ContainerProps>`
     justify-content: flex-start;
     border-radius: 0.5rem;
     border: 1px solid ${({theme}) => theme.colors.border};
-    transition: 0.5s;
     cursor: pointer;
     overflow: hidden;
 
@@ -49,7 +48,6 @@ export const Container = styled.div<ContainerProps>`
         height: 100%;
         background: ${({theme}) => theme.colors.gradient};
         opacity: .7;
-        transition: 0.5s;
     }
  }
 `;

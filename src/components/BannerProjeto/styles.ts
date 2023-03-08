@@ -44,7 +44,6 @@ export const Container = styled.div<ContainerProps>`
         height: 100%;
         background: ${({theme}) => theme.colors.gradient};
         opacity: .7;
-        transition: 0.5s;
     }
 
     @media(max-width: 700px) {

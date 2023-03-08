@@ -28,7 +28,6 @@ export const Container = styled.section`
         padding: 0.8rem 3rem;
         border-radius: 0.5rem;
         border: none;
-        transition: 0.5s;
 
         &:hover {
             background: ${({ theme }) => darken(0.1, theme.colors.primary)};
@@ -58,6 +57,12 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
     align-items: flex-end;
     position: relative;
 
+    > button a {
+            > i {
+                transition: 0s !important;
+            }
+        }
+
     &:hover {
         > section {
             > div.text {
@@ -70,6 +75,10 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
 
         > button a {
             color: ${({ theme }) => theme.colors.primary};
+
+            > i {
+                transition: 0s !important;
+            }
         }
     }
 
@@ -78,16 +87,14 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
         margin: 0 0 3rem 5rem;
         background: none;
         border: none;
-        transition: 0.5rem;
 
         > a {
-            color: #FFF;
+            color: ${({ theme }) => theme.colors.textLight};
             font-size: 2rem;
             font-weight: 300;
             display: flex;
             align-items: center;
             gap: 0.8rem;
-            transition: 0.5s;
         }
     }
 
@@ -104,27 +111,23 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
             height: 100%;
             background: ${({ theme }) => theme.colors.gradient};
             opacity: 0.75;
-            transition: 0.5s;
         }
 
         > div.text {
             position: absolute;
             top: 3rem;
             right: -10rem;
-            transition: 0.5s;
             width: fit-content;
 
             h1 {
                 color: ${({ theme }) => theme.colors.primary};
                 font-size: 2.5rem;
-                text-shadow: -4px 5px 22px #11172b;
             }
 
             h2 {
                 color: ${({ theme }) => theme.colors.secondary};
                 font-size: 2rem;
                 font-weight: 300;
-                text-shadow: -4px 5px 22px #11172b;
             }
         }
     }

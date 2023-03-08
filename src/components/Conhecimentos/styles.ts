@@ -7,11 +7,13 @@ export const Container = styled.section`
         margin-top: 8rem;
         width: 100%;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        justify-content: center;
-        gap: 8rem;
+        justify-content: space-around;
+        gap: 6rem;
 
         @media (max-width: 1000px) {
+            flex-wrap: wrap;
             gap: 5rem;
         }
         @media (max-width: 700px) {
@@ -40,7 +42,6 @@ export const ConhecimentoContainer = styled.div`
         width: 6.5rem;
         height: 6.5rem;
         color: ${({ theme }) => theme.colors.secondary};
-        transition: 0.3s;
     }
 
     &:hover {

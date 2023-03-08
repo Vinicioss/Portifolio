@@ -9,10 +9,12 @@ import Footer from "../components/Footer";
 import { GetStaticProps } from "next";
 import { getPrismicClient } from "../Services/prismic";
 import Prismic from '@prismicio/client';
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Head from 'next/head';
+import 'remixicon/fonts/remixicon.css';
+
 
 interface IProjeto {
   slug: string,
@@ -29,10 +31,12 @@ interface HomeProps {
 
 
 export default function Home({ projetos }: HomeProps) {
+
   useEffect(() => {
     Aos.init({duration: 1500});
   }, []);
 
+  
   return (
     <div>
       <HomeContainer>
@@ -53,7 +57,7 @@ export default function Home({ projetos }: HomeProps) {
         />
       </Head>
 
-        <Header/>
+      <Header/>
 
         <main className="container">
           <HomeHero/>
@@ -65,7 +69,6 @@ export default function Home({ projetos }: HomeProps) {
 
         <Footer />
       </HomeContainer>
-
     </div>
   );
 }

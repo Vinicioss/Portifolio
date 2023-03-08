@@ -15,7 +15,7 @@ export function HomeHero() {
               </div>
             </TextContainer>
           <InfosContainer>
-            <CodeItem data-aos="zoom-in">
+            <CodeItem>
               <section className='card'>
                   <span className="comment">/* Minha apresentação */</span>
                   <span className="purple">Infos</span> {'\u007B'}
@@ -29,14 +29,15 @@ export function HomeHero() {
               </section>
             </CodeItem>
           
-            <CodeItem data-aos="zoom-in">
+            <CodeItem>
               <section className='card'>
+                <br/>
                 <span className="purple">Competências</span> {'\u007B'}
                 <div>
-                  Função: <span className="blue">Dev Front-end,</span>
+                  Principal: <span className="blue">Dev Front-end,</span>
                 </div>
                 <div>
-                  Empresa: <span className="blue">Buscando oporunidade</span>
+                  Secundária: <span className="blue">Buscando oporunidade</span>
                 </div>
                 {'\u007D'}
               </section>

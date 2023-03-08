@@ -28,7 +28,6 @@ export const ProjetoContainer = styled.div`
             padding: .8rem 3rem;
             border-radius: .5rem;
             border: none;
-            transition: .5s;
             margin-top: 2rem;
 
             &:hover {

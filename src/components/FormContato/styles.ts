@@ -20,7 +20,6 @@ export const FormContainer = styled.form`
         font-size: 1.2rem;
         border-radius: .5rem;
         background: ${({theme}) => theme.colors.primary};
-        transition: .5s;
         width: fit-content;
 
         &:disabled {
@@ -55,7 +54,6 @@ export const Input = styled.input`
     border-radius: .5rem;
     font-size: 1.2rem;
     outline: none;
-    transition: .5s;
 
     &:focus {
         border-color: ${({theme}) => theme.colors.primary};
@@ -81,7 +79,6 @@ export const TextArea = styled.input`
     border-radius: .5rem;
     font-size: 1.2rem;
     outline: none;
-    transition: .5s;
 
     grid-column: 1/3;
 

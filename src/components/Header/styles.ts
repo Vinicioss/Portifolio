@@ -7,9 +7,11 @@ interface NavLinkProps {
 
 export const Container = styled.header`
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: max-content max-content;
     align-items: center;
     justify-content: center;
+    position: relative;
     height: 4rem;
     border-bottom: 1px solid ${({ theme }) => theme.colors.backgroundLight};
 
@@ -17,6 +19,17 @@ export const Container = styled.header`
         display: flex;
         gap: 2rem;
         align-items: center;
+    }
+    .theme_switch_container {
+        display: flex;
+        position: absolute;
+        right: 1.5rem;
+    }
+    .change-theme {
+        font-size: 1.25rem;
+        color: ${({ theme }) => theme.colors.primary};
+        cursor: pointer;
+        appearance: none;
     }
 `;
 
@@ -26,7 +39,6 @@ export const NavLinkConteiner = styled.li<NavLinkProps>`
         text-transform: uppercase;
         color: ${(props) => 
             props.isActive ? props.theme.colors.primary : props.theme.colors.textHighlight};
-            transition: 0.5s;
 
         &:hover {
             color: ${props => props.isActive ? lighten(0.3, props.theme.colors.primary) : lighten(0.2, props.theme.colors.textHighlight)};

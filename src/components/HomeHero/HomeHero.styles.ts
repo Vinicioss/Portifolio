@@ -12,11 +12,9 @@ export const Container = styled.section`
     > img {
         width: 40rem;
         flex: 1;
-        transition: all .3s;
     }
 
     > img:hover {
-        transition: all .3s;
         transform: scale(1.05);
         filter: contrast(120%);
         filter: opacity(100%);
@@ -140,22 +138,45 @@ export const CodeItem = styled.pre`
     position: relative;
     border-radius: 8px;
     padding: .1rem;
-    background-image: linear-gradient(var(--rotate), #1be0b5, #7AC7E3 43%, #11172B);
+    background-image: linear-gradient(var(--rotate), ${({ theme }) => theme.colors.animGradient1},
+     ${({ theme }) => theme.colors.animGradient2} 43%,
+      ${({ theme }) => theme.colors.animGradient3});
     top: -1%;
     left: -2%;
     animation: spin 2.5s ease-in-out infinite;
-    transition: 1s !important;
 
     .card {
         background: ${({ theme }) => theme.colors.gradient};
         padding: 1.5rem;
         font-family: 'JetBrains Mono', monospace;
         font-weight: 300;
-        color: #fff;
+        color: ${({ theme }) => theme.colors.textLight};
         width: 100%;
         height: 100%;
         border-radius: 8px;
         align-self: flex-start;
+
+        > div {
+        margin: 0.2rem 0;
+        margin-left: 1rem;
+        }
+
+        span.purple {
+            color: #d45d5d;
+        }
+        span.blue {
+            color: ${({ theme }) => theme.colors.animGradient2};
+        }
+        span.comment {
+            color: ${({ theme }) => theme.colors.text};
+            margin-bottom: 1rem;
+            display: block;
+        }
+        @media(min-width: 1450px) {
+        > br {
+            display: none;
+        }
+    }
     }
 
     @media(max-width: 1450px) {
@@ -167,30 +188,11 @@ export const CodeItem = styled.pre`
         width: 100%;
     }
 
-    &:hover {
-        filter: brightness(1.3);
-    }
-
     &:last-child {
         align-self: flex-end;
     }
 
-    > div {
-        margin: 0.2rem 0;
-        margin-left: 1rem;
-    }
 
-    span.purple {
-        color: #c38cdd;
-    }
-    span.blue {
-        color: #7ac7e3;
-    }
-    span.comment {
-        color: ${({ theme }) => theme.colors.text};
-        margin-bottom: 1rem;
-        display: block;
-    }
 
     &::after {
         position: absolute;
@@ -206,7 +208,9 @@ export const CodeItem = styled.pre`
         filter: blur(calc(var(--card-height) / 5));
         background-image: linear-gradient(
             var(--rotate)
-            , #5ddcff, #3c67e3 43%, #4e00c2);
+            , ${({ theme }) => theme.colors.animGradient1},
+            ${({ theme }) => theme.colors.animGradient2} 43%,
+            ${({ theme }) => theme.colors.animGradient3});
             opacity: 1;
         transition: opacity .5s;
         animation: spin 2.5s linear infinite;

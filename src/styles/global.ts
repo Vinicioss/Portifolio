@@ -7,8 +7,9 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    transition: all .3s;
 
-    ::-webkit-scrollbar {
+  ::-webkit-scrollbar {
       width: .6rem;
       border-radius: .5rem;
       background-color: ${({ theme }) => theme.colors.backgroundLight};

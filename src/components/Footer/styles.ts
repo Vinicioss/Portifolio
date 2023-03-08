@@ -22,7 +22,6 @@ export const Container = styled.footer`
             text-transform: uppercase;
             font-weight: 300;
             font-size: 1.2rem;
-            transition: .5s;
 
             &:hover {
                 color: ${({theme}) => lighten(0.2, theme.colors.secondary)}
@@ -38,7 +37,6 @@ export const Container = styled.footer`
                 width: 2rem;
                 height: 2rem;
                 color: ${({theme}) => theme.colors.text};
-                transition: .5s;
                 cursor: pointer;
 
                 &:hover {
