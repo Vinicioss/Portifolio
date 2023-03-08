@@ -1,12 +1,12 @@
 import { ReactNode } from 'react';
 import { Container, TextContainer, InfosContainer, CodeItem } from './HomeHero.styles';
-import picture from '../../assets/vinny.png'
+import picture from '../../assets/vinni.png'
 
 
 export function HomeHero() {
   return (
     <Container data-aos="fade-up">
-        <img src={picture} alt="Foto" />
+        <img src={'https://images.prismic.io/portifoliovinni/e2636fb1-47f3-48d5-806e-9f5fbcf10c35_Vinnin.png?auto=compress,format'} alt="Foto" />
         <div>
             <TextContainer className='wrapper'>
               <div >

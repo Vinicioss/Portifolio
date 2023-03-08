@@ -25,7 +25,7 @@ export const ProjetoContainer = styled.div`
 
         button {
             background: ${({theme}) => theme.colors.primary};
-            padding: .8rem 3rem;
+            padding: .8rem 0rem;
             border-radius: .5rem;
             border: none;
             margin-top: 2rem;
@@ -36,6 +36,7 @@ export const ProjetoContainer = styled.div`
 
             a {
                 color: #fff;
+                padding: 1rem 2rem;
                 text-transform: uppercase;
                 font-size: 1.5rem;
                 font-weight: 300;
