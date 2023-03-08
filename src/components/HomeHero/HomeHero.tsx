@@ -37,7 +37,7 @@ export function HomeHero() {
                   Principal: <span className="blue">Dev Front-end,</span>
                 </div>
                 <div>
-                  Secundária: <span className="blue">Buscando oporunidade</span>
+                  {/* Secundária: <span className="blue">Web Design</span> */}
                 </div>
                 {'\u007D'}
               </section>
