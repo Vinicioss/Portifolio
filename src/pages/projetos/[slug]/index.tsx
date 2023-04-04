@@ -3,7 +3,7 @@ import { BannerProjeto } from '../../../components/BannerProjeto'
 import Header from '../../../components/Header'
 import { getPrismicClient } from '../../../Services/prismic'
 import { ProjetoContainer } from '../../../styles/ProjetoContainer'
-import Prismic from '@prismicio/client';
+import * as Prismic from '@prismicio/client';
 import { useRouter } from 'next/router'
 import LoadingScreen from '../../../components/LoadingScreen'
 import Head from 'next/head'
@@ -25,7 +25,6 @@ interface ProjetoProps {
 export default function Projeto({ projeto }: ProjetoProps) {
 
     const router = useRouter();
-    console.log(projeto);
     if(router.isFallback) {
         return <LoadingScreen/>
     }
