@@ -6,8 +6,11 @@ import picture from '../../assets/vinni.png'
 export function HomeHero() {
   return (
     <Container data-aos="fade-up">
-        <img src={'https://images.prismic.io/portifoliovinni/e2636fb1-47f3-48d5-806e-9f5fbcf10c35_Vinnin.png?auto=compress,format'} alt="Foto" />
-        <div>
+        <div className='img_container'>
+          <div className='img_bg'/>
+          <img src={'https://images.prismic.io/portifoliovinni/8c0917d4-a030-4d16-a7c4-bcba03288b51_Vinni2.png?auto=compress,format'} alt="Foto" />
+        </div>
+        <div >
             <TextContainer className='wrapper'>
               <div >
               <h1>Olá,</h1>

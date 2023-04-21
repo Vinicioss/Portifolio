@@ -9,16 +9,32 @@ export const Container = styled.section`
     justify-content: center;
     margin-top: 5rem;
 
-    > img {
+    > div.img_container img {
+        position: relative;
         width: 40rem;
         flex: 1;
+        z-index: 2;
     }
 
-    > img:hover {
-        transform: scale(1.05);
-        filter: contrast(120%);
-        filter: opacity(100%);
+    > div.img_container {
+        position: relative;
     }
+
+    > div.img_container div.img_bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 48% 52% 37% 63% / 26% 31% 69% 74% ;
+        background: ${({ theme }) => theme.colors.gradient};
+    }
+
+    > div.img_container img:hover {
+        transform: scale(1.05);
+    }
+
+    > div.img_container:hover div.img_bg {
+         border-radius: 20% 20% 20% 20% / 20% 20% 20% 20% ;
+     }
 
     > div {
         flex: 4;
@@ -28,6 +44,7 @@ export const Container = styled.section`
         > img {
             width: 30rem;
         }
+
         
         > div {
             flex: 1;
