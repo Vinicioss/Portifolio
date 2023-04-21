@@ -43,13 +43,13 @@ export const Container = styled.div<ContainerProps>`
         h1 {
             color: ${({theme}) => theme.colors.primary};
             font-size: 1.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+            text-shadow: 2px 2px 4px ${({theme}) => theme.colors.background};
         }
         h2 {
             color: ${({theme}) => theme.colors.secondary};
             font-size: 1rem;
             font-weight: 300;
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+            text-shadow: 1px 1px 1px ${({theme}) => theme.colors.background};
         }
     }
  }
