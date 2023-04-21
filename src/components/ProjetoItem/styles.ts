@@ -19,27 +19,7 @@ export const Container = styled.div<ContainerProps>`
     border: 1px solid ${({theme}) => theme.colors.border};
     cursor: pointer;
     overflow: hidden;
-
-    &:hover {
-        border-color: ${({theme}) => theme.colors.primary};
-        transform: translateY(-15px);
-        > div.overlay {
-            opacity: 0.5;
-        }
-    }
-
-    > section {
-        z-index: 2;
-        h1 {
-            color: ${({theme}) => theme.colors.primary};
-            font-size: 1.5rem;
-        }
-        h2 {
-            color: ${({theme}) => theme.colors.secondary};
-            font-size: 1rem;
-            font-weight: 300;
-        }
-    }
+    
     > div.overlay {
         position: absolute;
         left: 0;
@@ -48,6 +28,29 @@ export const Container = styled.div<ContainerProps>`
         height: 100%;
         background: ${({theme}) => theme.colors.gradient};
         opacity: .7;
+    }
+    
+    &:hover {
+        border-color: ${({theme}) => theme.colors.primary};
+        transform: translateY(-15px);
+        > div.overlay {
+            opacity: 0.5;
+        }
+    }
+    
+    > section {
+        z-index: 2;
+        h1 {
+            color: ${({theme}) => theme.colors.primary};
+            font-size: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+        }
+        h2 {
+            color: ${({theme}) => theme.colors.secondary};
+            font-size: 1rem;
+            font-weight: 300;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+        }
     }
  }
 `;

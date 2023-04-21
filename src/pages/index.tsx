@@ -1,3 +1,8 @@
+import { GetStaticProps } from "next";
+import Prismic from '@prismicio/client';
+import { useEffect, useContext } from "react";
+import Aos from 'aos';
+import Head from 'next/head';
 import Header from "../components/Header";
 import { HomeContainer } from "../styles/HomeStyles";
 import { HomeHero } from "../components/HomeHero/HomeHero";
@@ -6,13 +11,8 @@ import Projetos from "../components/Projetos";
 import Conhecimentos from "../components/Conhecimentos";
 import FormContato from "../components/FormContato";
 import Footer from "../components/Footer";
-import { GetStaticProps } from "next";
 import { getPrismicClient } from "../Services/prismic";
-import Prismic from '@prismicio/client';
-import { useEffect, useContext } from "react";
-import Aos from 'aos';
 import 'aos/dist/aos.css';
-import Head from 'next/head';
 import 'remixicon/fonts/remixicon.css';
 
 
@@ -88,7 +88,7 @@ export const getStaticProps: GetStaticProps = async () => {
     title: projeto.data.title,
     type: projeto.data.type,
     description: projeto.data.description,
-    link: projeto.data.link.url,
+    link: projeto.data.link.url || null,
     thumbnail: projeto.data.thubnail.url,
   }))
 

@@ -1,10 +1,10 @@
 import { GetStaticProps } from "next";
+import Prismic from '@prismicio/client';
+import Head from "next/head";
 import Header from "../../components/Header";
 import { ProjetoItem } from "../../components/ProjetoItem";
 import { getPrismicClient } from "../../Services/prismic";
 import { ProjetosContainer } from "../../styles/ProjetoStyles";
-import Prismic from '@prismicio/client';
-import Head from "next/head";
 import 'remixicon/fonts/remixicon.css';
 
 interface IProjeto {
@@ -73,7 +73,7 @@ export const getStaticProps: GetStaticProps = async () => {
       title: projeto.data.title,
       type: projeto.data.type,
       description: projeto.data.description,
-      link: projeto.data.link.url,
+      link: projeto.data.link.url  || null,
       thumbnail: projeto.data.thubnail.url,
     }))
   

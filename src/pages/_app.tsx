@@ -1,7 +1,7 @@
 import { ThemeProvider } from 'styled-components';
 import NextNprogress from 'nextjs-progressbar';
+import { useState, createContext } from 'react';
 import GlobalStyles from '../styles/global';
-import { useContext, useState, createContext } from 'react';
 // import { ThemeContext, ThemeContextProvider } from '../contexts/ThemeContext';
 import light from '../styles/theme/light';
 import dark from '../styles/theme/dark';

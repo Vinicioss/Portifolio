@@ -1,7 +1,7 @@
+import Link from 'next/link';
 import SelectionTitle from '../SectionTitle';
 import ProjetoItem from './ProjetoItem';
 import { Container } from './styles';
-import Link from 'next/link';
 
 interface IProjeto {
     slug: string,
@@ -34,7 +34,7 @@ function Projetos({projetos}: ProjetosProps){
             </section>
             <button type="button">
                 <Link href="/projetos">
-                    <a>Ver todos os projetos</a>
+                    <span>Ver todos os projetos</span>
                 </Link>
             </button>
         </Container>

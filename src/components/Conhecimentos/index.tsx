@@ -1,7 +1,7 @@
-import SectionTitle from "../SectionTitle";
 import {AiFillHtml5, AiOutlineGithub} from 'react-icons/ai';
 import {FaCss3Alt, FaReact} from 'react-icons/fa';
 import {SiNextdotjs, SiTypescript, SiJavascript} from 'react-icons/si';
+import SectionTitle from "../SectionTitle";
 import { Container } from "./styles";
 import ConhecimentoItem from "./ConhecimentoItem";
 

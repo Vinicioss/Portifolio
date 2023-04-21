@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { FormContainer, Input, TextArea } from './styles';
 import emailjs from "@emailjs/browser";
+import { FormContainer, Input, TextArea } from './styles';
 
 export default function Form() {
 

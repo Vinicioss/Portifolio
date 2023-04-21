@@ -1,12 +1,12 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
+import Prismic from '@prismicio/client';
+import { useRouter } from 'next/router'
+import Head from 'next/head'
 import { BannerProjeto } from '../../../components/BannerProjeto'
 import Header from '../../../components/Header'
 import { getPrismicClient } from '../../../Services/prismic'
 import { ProjetoContainer } from '../../../styles/ProjetoContainer'
-import * as Prismic from '@prismicio/client';
-import { useRouter } from 'next/router'
 import LoadingScreen from '../../../components/LoadingScreen'
-import Head from 'next/head'
 import 'remixicon/fonts/remixicon.css';
 
 interface IProjeto {
@@ -29,10 +29,12 @@ export default function Projeto({ projeto }: ProjetoProps) {
         return <LoadingScreen/>
     }
 
+    const headTitle = `${projeto.title} | Meu portfólio`;
+
     return (
         <ProjetoContainer>
           <Head>
-            <title>{projeto.title} | Meu portfólio</title>
+            <title>{headTitle}</title>
             <meta
               name="description"
               content={projeto.description}
@@ -66,6 +68,7 @@ export default function Projeto({ projeto }: ProjetoProps) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const prismic = getPrismicClient();
+    
     const projetos = await prismic.query(
         [Prismic.Predicates.at('document.type', 'projeto')]
       );
@@ -94,7 +97,7 @@ export const getStaticProps: GetStaticProps = async context => {
       title: response.data.title,
       type: response.data.type,
       description: response.data.description,
-      link: response.data.link.url,
+      link: response.data.link.url || null,
       thumbnail: response.data.thubnail.url,
     }
   
