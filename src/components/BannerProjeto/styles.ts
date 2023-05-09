@@ -7,7 +7,7 @@ interface ContainerProps {
 export const Container = styled.div<ContainerProps>`
     width: 100%;
     background: url(${props => props.imgUrl}) no-repeat center;
-    background-size: cover;
+    background-size: contain;
     height: 26rem;
     position: relative;
     padding: 3rem 5rem;
@@ -20,7 +20,7 @@ export const Container = styled.div<ContainerProps>`
         border-color: ${({theme}) => theme.colors.primary};
 
         > div.overlay {
-            opacity: 0.5;
+            opacity: 0.2;
         }
     }
 

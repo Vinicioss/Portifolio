@@ -49,19 +49,21 @@ export default function Projeto({ projeto }: ProjetoProps) {
             />
           </Head>
           <Header/>
+          <div>
             <BannerProjeto 
-            title={projeto.title}
-            type={projeto.type}
-            imgUrl={projeto.thumbnail}
-          />
-          
-            <main>
-                <p> {projeto.description} </p>
+              title={projeto.title}
+              type={projeto.type}
+              imgUrl={projeto.thumbnail}
+            />
+            
+              <main>
+                  <p> {projeto.description} </p>
 
-                <button type='button'>
-                    <a href={projeto.link}>Ver projeto online</a>
-                </button>
-            </main>
+                  <button type='button'>
+                      <a href={projeto.link}>Ver projeto online</a>
+                  </button>
+              </main>
+            </div>
         </ProjetoContainer>
     )
 }

@@ -5,10 +5,17 @@ import styled from "styled-components";
 export const ProjetoContainer = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 100%;
 
-    > main {
+    > div {
+        display: flex;
+        flex-direction: column;
+        max-width: 80rem;
+    }
+
+    > div main {
         margin-top: 2rem;
         margin-bottom: 2rem;
         width: 100%;
