@@ -1,6 +1,6 @@
+import Head from "next/head";
 import NavLink from './NavLink';
 import { Container } from './styles';
-import Head from "next/head";
 
 export function Artisan() {
     
@@ -41,7 +41,7 @@ export function Artisan() {
                 <ul>
                     <NavLink title='Blog' path='/'/>
                     <NavLink title='Contacts' path='/'/>
-                    <button className='login_button'>Log in</button>
+                    <button type="button" className='login_button'>Log in</button>
                 </ul>
             </div>
 
@@ -63,7 +63,7 @@ export function Artisan() {
                             <br/>
                             of talented artists
                         </span>
-                        <button> GET STARTED <i className="ri-arrow-right-up-line"></i> </button>
+                        <button type="button"> GET STARTED <i className="ri-arrow-right-up-line"></i> </button>
                     </div>
 
                     <div className='lower'>
@@ -71,9 +71,9 @@ export function Artisan() {
                         <div className='lower_content'>
                             <p> We are the comprehensive online resource for digital artists that offers tutorials, tips, and tools</p>
                             <div className='lower_buttons'>
-                                <button>Facebook</button>
-                                <button>Twitter</button>
-                                <button>Instagram</button>
+                                <button type="button">Facebook</button>
+                                <button type="button">Twitter</button>
+                                <button type="button">Instagram</button>
                             </div>
                         </div>
                     </div>

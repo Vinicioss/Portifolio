@@ -1,8 +1,8 @@
 import Head from "next/head";
+import { useState } from "react";
 import Header from "../../components/Header";
 import { Container } from "../../styles/WeatherStyles";
 import 'remixicon/fonts/remixicon.css';
-import { useState } from "react";
 
 
 function Weather(){
@@ -12,7 +12,7 @@ function Weather(){
 
   const [weatherData, setWeatherData] =useState<any>({});
 
-  //https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+
   async function getWeatherData(e) {
     e.preventDefault();
     
@@ -59,13 +59,13 @@ function Weather(){
             <Header/>
             <main className="container">
                 <div className="container_base">
-                    <img src="./landscape.jpg"></img>
+                    <img src="./landscape.jpg" alt="background"></img>
                     <div className="dash">
                         <div className="temperatura temp2">
                           <div className="inner_temp">
                             <form className="input_container" onSubmit={(e) => getWeatherData(e)}>
                               <input placeholder="Buscar cidade" className="searchCity" onChange={(e) => setCityInput(e.target.value)}/>
-                              <button className="search_button" onClick={(e) => getWeatherData(e)}>Buscar</button>
+                              <button type="button" className="search_button" onClick={(e) => getWeatherData(e)}>Buscar</button>
                             </form>
                           </div>
                         </div>

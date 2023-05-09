@@ -38,5 +38,9 @@ module.exports = {
     "react/jsx-curly-brace-presence": "off",
     "no-nested-ternary": "off",
     "react/jsx-no-comment-textnodes": "off",
+    "react/no-unescaped-entities": "off",
+    "prefer-destructuring": "off",
+    "react/no-array-index-key": "off",
+    "prefer-template": "off",
   }
 };
