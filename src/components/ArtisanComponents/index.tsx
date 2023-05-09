@@ -49,7 +49,7 @@ export function Artisan() {
 
                 <div className='body_infos'>
                     <div className='upper'>
-                        <span> YOUR FIRST DIGITAL ART COLECTION </span>
+                        <span> YOUR FIRST DIGITAL ART COLLECTION </span>
                     </div>
 
                     <div className='mid'>
