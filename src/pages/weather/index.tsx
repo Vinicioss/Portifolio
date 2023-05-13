@@ -128,7 +128,7 @@ function Weather(){
                         </div>
                     </div>
                 </div>
-                <span className="bottomInfo">Dados atualzados automáticamente a cada 60s.</span>
+                <span className="bottomInfo">Dados atualzados automaticamente a cada 60s.</span>
             </main>
             
         </Container>
