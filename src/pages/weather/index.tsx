@@ -9,11 +9,34 @@ function Weather(){
   const API_KEY = "6e7058d7406d8b0d913c4cfca95f1bd8";
   
   const [ cityInput, setCityInput] = useState("Curitiba");
-
+  
   const [ cityState, setCityState] = useState("");
-
+  
   const [weatherData, setWeatherData] =useState<any>({});
   
+  async function getWeatherData() {
+    try {
+      const serverResponse = await fetch(
+        "https://api.openweathermap.org/data/2.5/weather?" +
+        "q=" +
+        cityInput +
+        "&appid=" +
+        API_KEY + 
+        "&lang=pt_br" +
+        "&units=metric"
+      )
+      const data = await serverResponse.json();
+      console.log(data)
+  
+      if(data?.cod === "400") throw data;
+      setWeatherData(data);
+  
+    } catch (err) {
+      console.log(err);
+    }
+    
+  }
+
   useEffect(() => {
     getWeatherData();
     
@@ -28,28 +51,6 @@ function Weather(){
   }, [cityState]);
 
 
-  async function getWeatherData() {
-    try {
-      const serverResponse = await fetch(
-        "https://api.openweathermap.org/data/2.5/weather?" +
-        "q=" +
-        cityInput +
-        "&appid=" +
-        API_KEY + 
-        "&lang=pt_br" +
-        "&units=metric"
-      )
-      const data = await serverResponse.json();
-      console.log(data)
-
-      if(data?.cod === "400") throw data;
-      setWeatherData(data);
-
-    } catch (err) {
-      console.log(err);
-    }
-    
-  }
   
   
   const handleSubmit = async (e) => {
