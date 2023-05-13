@@ -4,7 +4,7 @@ import { Container } from './styles';
 
 export function Artisan() {
     
-    const text = "S u b s c r ib e   t o   A r t is ia n   n e w  s le t t e r    ";
+    const text = "S u b s c r ib e   t o   A r t is a n   n e w  s le t t e r    ";
     const length = text.length;
     const deg = 360 / length;
 
