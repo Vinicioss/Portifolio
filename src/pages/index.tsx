@@ -62,7 +62,6 @@ export default function Home({ projetos }: HomeProps) {
         <main className="container">
           <HomeHero/>
           <Conhecimentos/>
-          <Experiencias/>
           <Projetos projetos={projetos}/>
           <FormContato/>
         </main>

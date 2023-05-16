@@ -36,7 +36,6 @@ export const Container = styled.header`
 export const NavLinkConteiner = styled.li<NavLinkProps>`
 
     a{
-        text-transform: uppercase;
         color: ${(props) => 
             props.isActive ? props.theme.colors.primary : props.theme.colors.textHighlight};
 

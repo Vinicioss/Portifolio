@@ -1,9 +1,20 @@
 import { ReactNode } from 'react';
+import {
+  AiOutlineGithub,
+  AiFillLinkedin,
+  AiOutlineWhatsApp
+} from 'react-icons/ai';
 import { Container, TextContainer, InfosContainer, CodeItem } from './HomeHero.styles';
 import picture from '../../assets/vinni.png'
 
 
+
 export function HomeHero() {
+
+  function handleRedirect(url: string) {
+    window.open(url);
+};
+
   return (
     <Container>
         <div className='img_container'>
@@ -18,34 +29,24 @@ export function HomeHero() {
               </div>
             </TextContainer>
           <InfosContainer>
-            <CodeItem>
-              <section className='card'>
-                  <span className="comment">/* Minha apresentação */</span>
-                  <span className="purple">Infos</span> {'\u007B'}
-                  <div>
-                    Nome: <span className="blue">Vinicios,</span>
-                  </div>
-                  <div>
-                    Sobrenome: <span className="blue">Santana</span>
-                  </div>
-                  {'\u007D'}
-              </section>
-            </CodeItem>
-          
-            <CodeItem>
-              <section className='card'>
-                <br/>
-                <span className="purple">Competências</span> {'\u007B'}
-                <div>
-                  Principal: <span className="blue">Dev Front-end,</span>
-                </div>
-                <div>
-                  {/* Secundária: <span className="blue">Web Design</span> */}
-                </div>
-                {'\u007D'}
-              </section>
-            </CodeItem>
+            <p>
+            Sou Vinicios Santana, um desenvolvedor front-end apaixonado por criar experiências digitais envolventes e funcionais. 
+            Com habilidades em HTML, CSS, JavaScript e frameworks como React e NextJS, 
+            estou aprendendo a transformar conceitos em realidade, e entregar projetos de alta qualidade. 
+            Meu foco está na usabilidade, acessibilidade e colaboração eficaz. Estou sempre aberto a novas oportunidades e desafios.
+            </p>
           </InfosContainer>
+          <div className='wrapper_bottom'>
+            <div className='button_contact'>Entre em contato <i className="ri-arrow-right-line"></i></div>
+            <AiOutlineWhatsApp 
+              className='icon_contact'
+              onClick={() => handleRedirect("https://wa.me/5541987329157")}
+            />
+            <AiFillLinkedin 
+              className='icon_contact'
+              onClick={() => handleRedirect("https://www.linkedin.com/in/vinicioss/")}
+            />
+          </div>
         </div>
     </Container>
   );

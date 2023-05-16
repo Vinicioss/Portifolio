@@ -69,7 +69,7 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
                 right: -12rem;
             }
             > div.overlay {
-                opacity: 0.4;
+                opacity: 0.1;
             }
         }
 
@@ -110,7 +110,7 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
             width: 100%;
             height: 100%;
             background: ${({ theme }) => theme.colors.gradient};
-            opacity: 0.75;
+            opacity: 0.5;
         }
 
         > div.text {

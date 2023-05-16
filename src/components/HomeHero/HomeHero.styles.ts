@@ -8,6 +8,7 @@ export const Container = styled.section`
     align-items: center;
     justify-content: center;
     margin-top: 5rem;
+    margin-bottom: 2rem;
 
     > div.img_container img {
         position: relative;
@@ -26,6 +27,41 @@ export const Container = styled.section`
         position: absolute;
         border-radius: 48% 52% 37% 63% / 26% 31% 69% 74% ;
         background: ${({ theme }) => theme.colors.gradient};
+    }
+
+    .button_contact {
+        border: none;
+        padding: 1rem 2rem;
+        margin-right: 2rem;
+        color: #FFF;
+        font-weight: 300;
+        font-size: 1rem;
+        border-radius: .5rem;
+        background: ${({theme}) => theme.colors.primary};
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        > i {
+            font-size: 1.3rem;
+        }
+    }
+
+    .wrapper_bottom {
+        margin-top: 3rem;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .icon_contact {
+        font-size: 2.5rem;
+        cursor: pointer;
+    }
+    .icon_contact:hover {
+        transform: scale(1.2);
+        color: ${({theme}) => theme.colors.primary}
     }
 
     > div.img_container img:hover {
@@ -66,22 +102,22 @@ export const Container = styled.section`
 `;
 
 export const TextContainer = styled.section`
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     width: 100%;
 
     h1 {
-        font-size: 8rem;
+        font-size: 4rem;
         color: ${({ theme }) => theme.colors.primary}
     }
     h2 {
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: 400;
         color: ${({ theme }) => theme.colors.secondary}
     }
 
     @media(max-width: 1450px) {
         h1 {
-            font-size: 5rem;
+            font-size: 4rem;
         }
         
         h2 {
@@ -129,10 +165,14 @@ export const TextContainer = styled.section`
 `;
 
 export const InfosContainer = styled.section`
+    color: ${({theme}) => theme.colors.textLight};
     width: 100%;
     display: flex;
     flex-direction: column;
+    font-size: .9rem;
     gap: 2rem;
+    word-spacing: 3px;
+    letter-spacing: 1px;
 `;
 
 
