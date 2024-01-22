@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { useState, useRef } from "react";
-import NavLink from './NavLink';
 import { Container } from './styles';
 import AnimatedGif from "./AnimatedGif";
 
