@@ -299,6 +299,23 @@ export const Container = styled.section`
                 }
             }
         }
+    }    
+    @media(max-width: 400px) {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+
+        .upper{
+            >span {
+                font-size: 1.5rem;
+            }
+            .emoji {
+                    font-size: 1rem;
+                .emoji1 {
+                    font-size: 1.5rem;
+                }
+            }
+        }
     }
 
 
