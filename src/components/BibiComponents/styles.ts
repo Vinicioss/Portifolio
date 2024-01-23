@@ -300,7 +300,7 @@ export const Container = styled.section`
             }
         }
     }    
-    @media(max-width: 400px) {
+    @media(max-width: 450px) {
         height: 100vh;
         display: flex;
         justify-content: center;
