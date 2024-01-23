@@ -2,21 +2,11 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
 
-    min-height: 100vh;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: max-content 1fr;
     background-color: #fdf7f2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
     font-weight: 500;
-
-    .main {
-        width: 100%;
-        min-width: 1200px;
-        max-width: 1200px;
-        padding: 0 3rem;
-        position: relative;
-    }
     
 
     .header {
@@ -73,7 +63,6 @@ export const Container = styled.section`
     }
 
     .body_infos {
-        margin-right: 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -292,6 +281,24 @@ export const Container = styled.section`
         justify-content: center;
 
         font-size: .8rem;
+    }
+
+    @media(max-width: 500px) {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+
+        .upper{
+            >span {
+                font-size: 2rem;
+            }
+            .emoji {
+                    font-size: 1.5rem;
+                .emoji1 {
+                    font-size: 2rem;
+                }
+            }
+        }
     }
 
 
