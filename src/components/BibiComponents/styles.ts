@@ -283,7 +283,7 @@ export const Container = styled.section`
         font-size: .8rem;
     }
 
-    @media(max-width: 500px) {
+    @media(max-width: 1000px) {
         height: 100vh;
         display: flex;
         justify-content: center;
